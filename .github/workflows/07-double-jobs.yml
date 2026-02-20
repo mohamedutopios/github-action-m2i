@@ -1,0 +1,25 @@
+name: "07 · Deux jobs en parallèle"
+ 
+on: workflow_dispatch
+ 
+jobs:
+
+  tests-unitaires:
+    name: " Tests unitaires"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simuler les tests unitaires
+        run: |
+          echo " Lancement des tests unitaires..."
+          sleep 3
+          echo " 12 tests passés, 0 échoué"
+ 
+  verif-style:
+    name: " Vérification du style"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simuler la vérification du style (lint)
+        run: |
+          echo " Vérification du style du code..."
+          sleep 2
+          echo " Aucune erreur de style détectée"
