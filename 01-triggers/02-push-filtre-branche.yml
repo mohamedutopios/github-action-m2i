@@ -1,0 +1,16 @@
+name: "02 - push filtre branches"
+
+on: 
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  afficher-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Afficher des infos"
+        run: |
+          echo "Branch detecte"
+          echo "branch : ${{ github.ref_name }}"
