@@ -32,7 +32,7 @@ jobs:
  
       - name: " Step 4 — Vérifier que le fichier existe"
         run: |
-          if [ -f rapport.txt ]; then
+          if [ -f rapport.tx ]; then
             echo " rapport.txt trouvé ($(wc -c < rapport.txt) octets)"
           else
             echo " rapport.txt introuvable !"
