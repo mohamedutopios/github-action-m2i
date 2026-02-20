@@ -1,0 +1,28 @@
+name: "05 · Combinaison + schedule"
+ 
+on:
+  push:
+    branches:
+      - main
+      - develop
+ 
+  pull_request:
+    branches:
+      - main
+ 
+  schedule:
+    - cron: "0 7 * * 5"   
+ 
+  workflow_dispatch:       
+ 
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📊 Identifier l'origine du déclenchement
+        run: |
+          echo " Workflow lancé !"
+          echo " Événement    : ${{ github.event_name }}"
+          echo " Acteur       : ${{ github.actor }}"
+          echo " Branche      : ${{ github.ref_name }}"
+          echo " Run n°       : ${{ github.run_number }}"
