@@ -10,5 +10,5 @@ jobs:
         run: |
           echo "Psuh detecte"
           echo "Author : ${{ github.actor }}"
-          echo "Author : ${{ github.ref_name }}"
-          echo "Author : ${{ github.sha }}"
+          echo "branch : ${{ github.ref_name }}"
+          echo "sha : ${{ github.sha }}"
